@@ -73,4 +73,4 @@ fi
 
 env
 
-exec "carte.sh carte.config.xml"
+exec $KETTLE_HOME/carte.sh carte.config.xml
