@@ -18,7 +18,10 @@ A Docker image for Pentaho Data Integration (currently version 6.1)
   "instances": 1,
   "cpus": 0.5,
   "mem": 2048,
-  "ports": [0]
+  "ports": [0],
+  "env": {
+    "CARTE_NETWORK_INTERFACE": "eth1"
+  }
 }
 ```
 
@@ -43,7 +46,8 @@ A Docker image for Pentaho Data Integration (currently version 6.1)
   "env": {
     "PDI_MASTER_SERVICE_NAME": "pentaho-di-master.marathon.mesos",
     "CARTE_INCLUDE_MASTERS": "Y",
-    "CARTE_IS_MASTER": "N"
+    "CARTE_IS_MASTER": "N",
+    "CARTE_NETWORK_INTERFACE": "eth1"
   }
 }
 ```
