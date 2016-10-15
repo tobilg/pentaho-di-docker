@@ -32,7 +32,7 @@ if [ ! -f "$KETTLE_HOME/carte.config.xml" ]; then
       MESOS_DNS_SERVER=$(cat /etc/resolv.conf | grep nameserver | awk -F" " '{print $2}' | head -n 1)
 
       # Get master endpoint dynamically
-      MASTER_ENDPOINT=$(mesosdns-resolver --serviceName $PDI_MASTER_SERVICE_NAME --server $MESOS_DNS_SERVER --portIndex 0)
+      MASTER_ENDPOINT=$(mesosdns-resolver --serviceName $PDI_MASTER_SERVICE_NAME --server $HOST --portIndex 0)
       MASTER_IP=$(echo $MASTER_ENDPOINT |cut -d':' -f1)
       MASTER_PORT=$(echo $MASTER_ENDPOINT |cut -d':' -f2)
 
