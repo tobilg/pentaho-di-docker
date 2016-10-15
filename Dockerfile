@@ -52,4 +52,4 @@ WORKDIR $KETTLE_HOME
 ENTRYPOINT ["../scripts/entrypoint.sh"]
 
 # Run Carte - these parameters are passed to the entrypoint
-CMD ["carte.sh", "carte.config.xml"]
+#CMD ["carte.sh", "carte.config.xml"]
