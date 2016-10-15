@@ -18,7 +18,10 @@ RUN mkdir ${PENTAHO_HOME} && \
     mkdir -p $PENTAHO_HOME/docker-entrypoint.d $PENTAHO_HOME/templates $PENTAHO_HOME/scripts && \
     curl -sSL https://raw.githubusercontent.com/tobilg/mesosdns-resolver/master/mesosdns-resolver.sh -o /usr/local/bin/mesosdns-resolver && \
     chmod +x /usr/local/bin/mesosdns-resolver && \
-    apt-get install -y dnsutils
+    apt-get update && \
+    apt-get install -y dnsutils && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN chown -R pentaho:pentaho $PENTAHO_HOME
 
