@@ -17,10 +17,7 @@ A Docker image for Pentaho Data Integration (currently version 6.1)
   },
   "instances": 1,
   "cpus": 0.5,
-  "mem": 2048,
-  "env": {
-    "GITLAB_SERVICE_NAME": "gitlab.marathon.mesos"
-  }
+  "mem": 2048
 }
 ```
 
